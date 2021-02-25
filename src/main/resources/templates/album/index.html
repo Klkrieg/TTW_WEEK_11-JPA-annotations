@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Music Library | Albums</title>
+</head>
+<body>
+    <h1>Welcome to you very own crappy music library.</h1>
+    <h3>It's not much so you should probably go somewhere else to save your favorite music :)</h3>
+
+    <form action="#" th:action="@{/}" th:object="${album}" method="post">
+        <input type="text" placeholder="Album Title" th:field="*{albumName}" />
+        <input type="text" placeholder="Artist" th:field="*{artist}"/>
+        <input type="text" placeholder="1995" th:field="*{yearReleased}"/>
+        <button type="submit">ADD ALBUM</button>
+    </form>
+</body>
+</html>
